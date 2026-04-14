@@ -321,6 +321,63 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: var(--white);
 }
 
+/* -- Video + Intro block -- */
+.story__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.story__video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: var(--black);
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+.story__video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.story__greeting {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.story__intro-text p {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.story__intro-text p:last-child {
+  margin-bottom: 0;
+}
+.story__intro-text em {
+  color: var(--gold-dark);
+  font-style: italic;
+}
+.story__intro-text strong {
+  color: var(--black);
+  font-weight: 600;
+}
+
+/* -- Chapters -- */
 .story__grid {
   max-width: 800px;
   margin: 0 auto;
@@ -791,6 +848,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
+  .story__intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
   .set__products {
     flex-direction: column;
     gap: 1.5rem;
