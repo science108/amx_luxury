@@ -88,24 +88,29 @@
   to { height: 80%; }
 }
 
-/* ---------- Product image glow on hover ---------- */
-.product--dark .product__image img {
-  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.3));
+/* ---------- Set product image glow on hover ---------- */
+.set--dark .set__product-image img {
+  filter: drop-shadow(0 16px 48px rgba(0, 0, 0, 0.3));
   transition: transform 0.6s var(--ease-smooth), filter 0.6s var(--ease-smooth);
 }
-.product--dark .product__image:hover img {
-  filter: drop-shadow(0 20px 80px rgba(197, 164, 78, 0.15));
-  transform: scale(1.03);
+.set--dark .set__product-image:hover img {
+  filter: drop-shadow(0 20px 60px rgba(197, 164, 78, 0.18));
+  transform: scale(1.04);
 }
 
-.product--light .product__image img {
-  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.12));
+.set--light .set__product-image img {
+  filter: drop-shadow(0 16px 48px rgba(0, 0, 0, 0.1));
   transition: transform 0.6s var(--ease-smooth), filter 0.6s var(--ease-smooth);
 }
-.product--light .product__image:hover img {
-  filter: drop-shadow(0 20px 80px rgba(0, 0, 0, 0.2));
-  transform: scale(1.03);
+.set--light .set__product-image:hover img {
+  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.18));
+  transform: scale(1.04);
 }
+
+/* ---------- Set products staggered reveal ---------- */
+.set__products .set__product:nth-child(1).reveal { transition-delay: 0s; }
+.set__products .set__divider.reveal { transition-delay: 0.1s; }
+.set__products .set__product:nth-child(3).reveal { transition-delay: 0.2s; }
 
 /* ---------- Value cards subtle lift ---------- */
 .values__card {
