@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — AMX Luxury</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body class="page--dark">
+
+  <!-- NAV -->
+  <nav class="nav nav--scrolled">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">AMX <span>Luxury</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.story">Back to Store</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button class="lang-switch__btn lang-switch__btn--active" data-lang="en">EN</button>
+        <button class="lang-switch__btn" data-lang="pl">PL</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CHECKOUT -->
+  <section class="checkout">
+    <div class="container">
+      <div class="checkout__grid">
+
+        <!-- LEFT: Form -->
+        <div class="checkout__forms" id="checkoutForms">
+
+          <!-- Contact -->
+          <div class="checkout__form-section">
+            <h2 id="coSec1">Contact</h2>
+            <div class="form-row form-row--full">
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="fname" id="coLblFirst">First name</label>
+                <input type="text" id="fname" placeholder="" required>
+              </div>
+              <div class="form-field">
+                <label for="lname" id="coLblLast">Last name</label>
+                <input type="text" id="lname" placeholder="" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping -->
+          <div class="checkout__form-section">
+            <h2 id="coSec2">Shipping Address</h2>
+            <div class="form-row form-row--full">
+              <div class="form-field">
+                <label for="address" id="coLblAddr">Address</label>
+                <input type="text" id="address" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="city" id="coLblCity">City</label>
+                <input type="text" id="city" required>
+              </div>
+              <div class="form-field">
+                <label for="zip" id="coLblZip">ZIP / Postal code</label>
+                <input type="text" id="zip" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="country" id="coLblCountry">Country</label>
+                <select id="country">
+                  <option value="DE">Germany</option>
+                  <option value="PL">Poland</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="FR">France</option>
+                  <option value="AT">Austria</option>
+                  <option value="BE">Belgium</option>
+                  <option value="IT">Italy</option>
+                  <option value="ES">Spain</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="US">United States</option>
+                  <option value="IN">India</option>
+                  <option value="CH">Switzerland</option>
+                  <option value="SE">Sweden</option>
+                  <option value="DK">Denmark</option>
+                  <option value="OTHER">Other</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="phone" id="coLblPhone">Phone (optional)</label>
+                <input type="tel" id="phone">
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment -->
+          <div class="checkout__form-section">
+            <h2 id="coSec3">Payment</h2>
+            <div class="pay-methods" id="payMethods">
+
+              <label class="pay-method pay-method--selected">
+                <input type="radio" name="payment" value="card" checked>
+                <span class="pay-method__label" id="pmCard">Credit / Debit Card</span>
+                <span class="pay-method__icons">
+                  <span class="pay-method__icon">VISA</span>
+                  <span class="pay-method__icon">MC</span>
+                  <span class="pay-method__icon">AMEX</span>
+                </span>
+              </label>
+
+              <label class="pay-method">
+                <input type="radio" name="payment" value="paypal">
+                <span class="pay-method__label">PayPal</span>
+                <span class="pay-method__icons">
+                  <span class="pay-method__icon" style="background:#003087;color:#fff">PayPal</span>
+                </span>
+              </label>
+
+              <label class="pay-method">
+                <input type="radio" name="payment" value="applepay">
+                <span class="pay-method__label">Apple Pay</span>
+                <span class="pay-method__icons">
+                  <span class="pay-method__icon" style="background:#000;color:#fff">&#63743; Pay</span>
+                </span>
+              </label>
+
+              <label class="pay-method">
+                <input type="radio" name="payment" value="googlepay">
+                <span class="pay-method__label">Google Pay</span>
+                <span class="pay-method__icons">
+                  <span class="pay-method__icon">G Pay</span>
+                </span>
+              </label>
+
+              <label class="pay-method">
+                <input type="radio" name="payment" value="klarna">
+                <span class="pay-method__label">Klarna <span style="font-size:0.72rem;opacity:0.5">— Pay later</span></span>
+                <span class="pay-method__icons">
+                  <span class="pay-method__icon" style="background:#FFB3C7;color:#0A0A0A">Klarna</span>
+                </span>
+              </label>
+
+            </div>
+
+            <!-- Card fields (shown when card selected) -->
+            <div class="card-fields" id="cardFields">
+              <div class="form-row form-row--full">
+                <div class="form-field">
+                  <label for="cardNumber" id="coLblCardNum">Card number</label>
+                  <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="cardExpiry" id="coLblExp">Expiry</label>
+                  <input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7">
+                </div>
+                <div class="form-field">
+                  <label for="cardCvc">CVC</label>
+                  <input type="text" id="cardCvc" placeholder="123" maxlength="4">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Summary -->
+        <div class="checkout__summary" id="checkoutSummary">
+          <h3 id="coSumTitle">Order Summary</h3>
+          <div id="summaryItems"></div>
+          <div id="summaryTotals"></div>
+          <div class="checkout__place-btn">
+            <button class="btn btn--gold btn--lg btn--full" id="placeOrderBtn">Place Order</button>
+          </div>
+          <div class="checkout__badges">
+            <span>SSL Encrypted</span>
+            <span>100% Vegan</span>
+            <span>Free Shipping*</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Success overlay -->
+  <div class="order-success" id="orderSuccess">
+    <div class="order-success__inner">
+      <div class="order-success__check">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2 id="successTitle">Thank You!</h2>
+      <p id="successText">Your order has been placed successfully. A confirmation email will be sent shortly. We're preparing your AMX Luxury products with care.</p>
+      <a href="index.html" class="btn btn--gold" id="successBtn">Back to Home</a>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    function lang() { return localStorage.getItem('amx_lang') || 'en'; }
+    function t(en, pl) { return lang() === 'pl' ? pl : en; }
+
+    function renderSummary() {
+      var cart = AMX_getCart();
+      var P = AMX_PRODUCTS;
+      var itemsEl = document.getElementById('summaryItems');
+      var totalsEl = document.getElementById('summaryTotals');
+
+      if (cart.length === 0) {
+        itemsEl.innerHTML = '<p style="color:rgba(255,255,255,0.4);padding:2rem 0;text-align:center">' + t('Cart is empty', 'Koszyk jest pusty') + '</p>';
+        totalsEl.innerHTML = '';
+        return;
+      }
+
+      var html = '';
+      var subtotal = 0;
+      cart.forEach(function (item) {
+        var p = P[item.productId];
+        if (!p) return;
+        var price = item.isSub ? p.priceSub : p.price;
+        var lineTotal = price * item.qty;
+        subtotal += lineTotal;
+        var pName = lang() === 'pl' ? p.namePl : p.name;
+        html +=
+          '<div class="summary-item">' +
+            '<img src="' + p.img + '" alt="" class="summary-item__img">' +
+            '<div class="summary-item__info">' +
+              '<strong>' + pName + (item.qty > 1 ? ' ×' + item.qty : '') + '</strong>' +
+              '<span>' + (item.isSub ? t('Subscription', 'Subskrypcja') : t('One-time', 'Jednorazowo')) + '</span>' +
+            '</div>' +
+            '<span class="summary-item__price">€' + lineTotal + '</span>' +
+          '</div>';
+      });
+      itemsEl.innerHTML = html;
+
+      var hasSub = cart.some(function (i) { return i.isSub; });
+      var shipping = hasSub ? 0 : (subtotal >= 100 ? 0 : 9);
+      var total = subtotal + shipping;
+      totalsEl.innerHTML =
+        '<div class="summary-line"><span>' + t('Subtotal', 'Produkty') + '</span><span>€' + subtotal + '</span></div>' +
+        '<div class="summary-line"><span>' + t('Shipping', 'Wysyłka') + '</span><span>' + (shipping === 0 ? t('Free', 'Gratis') : '€' + shipping) + '</span></div>' +
+        '<div class="summary-line summary-line--total"><span>' + t('Total', 'Suma') + '</span><span>€' + total + '</span></div>';
+    }
+
+    /* Payment method toggle */
+    document.querySelectorAll('.pay-method').forEach(function (el) {
+      el.addEventListener('click', function () {
+        document.querySelectorAll('.pay-method').forEach(function (m) { m.classList.remove('pay-method--selected'); });
+        el.classList.add('pay-method--selected');
+        var val = el.querySelector('input[type=radio]').value;
+        document.getElementById('cardFields').style.display = val === 'card' ? 'block' : 'none';
+      });
+    });
+
+    /* Card number formatting */
+    var cardInput = document.getElementById('cardNumber');
+    if (cardInput) {
+      cardInput.addEventListener('input', function () {
+        var v = cardInput.value.replace(/\D/g, '').substring(0, 16);
+        cardInput.value = v.replace(/(.{4})/g, '$1 ').trim();
+      });
+    }
+    var expiryInput = document.getElementById('cardExpiry');
+    if (expiryInput) {
+      expiryInput.addEventListener('input', function () {
+        var v = expiryInput.value.replace(/\D/g, '').substring(0, 4);
+        if (v.length >= 3) v = v.substring(0, 2) + ' / ' + v.substring(2);
+        expiryInput.value = v;
+      });
+    }
+
+    /* Place order (simulated) */
+    document.getElementById('placeOrderBtn').addEventListener('click', function () {
+      var email = document.getElementById('email').value;
+      var fname = document.getElementById('fname').value;
+      if (!email || !fname) {
+        alert(t('Please fill in the required fields.', 'Proszę uzupełnić wymagane pola.'));
+        return;
+      }
+      var cart = AMX_getCart();
+      if (cart.length === 0) {
+        alert(t('Your cart is empty.', 'Twój koszyk jest pusty.'));
+        return;
+      }
+
+      localStorage.removeItem('amx_cart');
+      document.getElementById('orderSuccess').classList.add('order-success--visible');
+    });
+
+    /* i18n for checkout */
+    function localize() {
+      var l = lang();
+      document.getElementById('coSec1').textContent = t('Contact', 'Kontakt');
+      document.getElementById('coSec2').textContent = t('Shipping Address', 'Adres Dostawy');
+      document.getElementById('coSec3').textContent = t('Payment', 'Płatność');
+      document.getElementById('coLblFirst').textContent = t('First name', 'Imię');
+      document.getElementById('coLblLast').textContent = t('Last name', 'Nazwisko');
+      document.getElementById('coLblAddr').textContent = t('Address', 'Adres');
+      document.getElementById('coLblCity').textContent = t('City', 'Miasto');
+      document.getElementById('coLblZip').textContent = t('ZIP / Postal code', 'Kod pocztowy');
+      document.getElementById('coLblCountry').textContent = t('Country', 'Kraj');
+      document.getElementById('coLblPhone').textContent = t('Phone (optional)', 'Telefon (opcjonalnie)');
+      document.getElementById('coLblCardNum').textContent = t('Card number', 'Numer karty');
+      document.getElementById('coLblExp').textContent = t('Expiry', 'Ważność');
+      document.getElementById('pmCard').textContent = t('Credit / Debit Card', 'Karta kredytowa / debetowa');
+      document.getElementById('coSumTitle').textContent = t('Order Summary', 'Podsumowanie');
+      document.getElementById('placeOrderBtn').textContent = t('Place Order', 'Złóż Zamówienie');
+      document.getElementById('successTitle').textContent = t('Thank You!', 'Dziękujemy!');
+      document.getElementById('successText').textContent = t(
+        'Your order has been placed successfully. A confirmation email will be sent shortly. We\'re preparing your AMX Luxury products with care.',
+        'Twoje zamówienie zostało złożone pomyślnie. Wkrótce otrzymasz email z potwierdzeniem. Przygotowujemy Twoje produkty AMX Luxury z troską.'
+      );
+      document.getElementById('successBtn').textContent = t('Back to Home', 'Wróć na Stronę');
+      renderSummary();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      renderSummary();
+      localize();
+
+      var observer = new MutationObserver(function () { localize(); });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    });
+  })();
+  </script>
+</body>
+</html>
