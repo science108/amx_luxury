@@ -86,7 +86,15 @@
     'set.feat.boost':    { en: 'Vegan collagen-boosting formula',   pl: 'Wegańska formuła wzmacniająca kolagen' },
     'set.feat.ethical':  { en: 'Ethically sourced ingredients',   pl: 'Etycznie pozyskane składniki' },
     'set.feat.28days':   { en: 'Visible results in 28 days',   pl: 'Widoczne efekty w 28 dni' },
+    'set.type.serum':    { en: 'Rejuvenating Serum',   pl: 'Serum Odmładzające' },
+    'set.feat.serum.conc':{ en: 'Concentrated active peptides',   pl: 'Skoncentrowane aktywne peptydy' },
+    'set.feat.serum.fast':{ en: 'Fast-absorbing formula',   pl: 'Szybko wchłaniająca się formuła' },
+    'set.feat.serum.amp': { en: 'Amplifies cream results',   pl: 'Wzmacnia efekty kremu' },
     'set.price.label':   { en: 'Complete Set',   pl: 'Kompletny Zestaw' },
+    'set.price.duo':     { en: 'Duo Set',   pl: 'Zestaw Duo' },
+    'set.price.complete':{ en: 'Complete Set',   pl: 'Pełny Zestaw' },
+    'set.save.duo':      { en: 'save €9',   pl: 'oszczędź €9' },
+    'set.save.complete': { en: 'save €18',   pl: 'oszczędź €18' },
     'set.cta.men':       { en: 'Order Men\'s Set',   pl: 'Zamów Zestaw Męski' },
     'set.cta.women':     { en: 'Order Women\'s Set',   pl: 'Zamów Zestaw Damski' },
     'set.sub.hint':      { en: 'or <a href="products/men-set.html">subscribe from €99/mo</a>',
@@ -124,7 +132,7 @@
     'footer.women':      { en: 'Women\'s Set',   pl: 'Zestaw Damski' },
 
     /* ====== PRODUCT PAGES (shared) ====== */
-    'ph.badge':          { en: 'Best Value — Save €19',   pl: 'Najlepsza Wartość — Oszczędzasz €19' },
+    'ph.badge':          { en: 'Best Value — Save €9',   pl: 'Najlepsza Wartość — Oszczędź €9' },
     'ph.title.men':      { en: 'The Men\'s Set',   pl: 'Zestaw Męski' },
     'ph.title.women':    { en: 'The Women\'s Set',   pl: 'Zestaw Damski' },
     'ph.tagline':        { en: 'Complete intimate wellness — outside &amp; inside.',
@@ -140,7 +148,7 @@
     'pricing.save20':    { en: 'Save €20 every month',   pl: 'Oszczędzasz €20 każdego miesiąca' },
     'pricing.addtocart': { en: 'Add to Cart',   pl: 'Dodaj do Koszyka' },
     'pricing.subnow':    { en: 'Subscribe Now',   pl: 'Subskrybuj Teraz' },
-    'pricing.note':      { en: 'Cancel anytime. Free shipping on subscriptions.',
+    'pricing.note':      { en: 'Cancel anytime. Free shipping on all subscriptions.',
                            pl: 'Anuluj w dowolnym momencie. Darmowa wysyłka przy subskrypcji.' },
     'trust.vegan':       { en: '100% Vegan',   pl: '100% Wegańskie' },
     'trust.lab':         { en: 'Lab-Proven',   pl: 'Klinicznie Potwierdzone' },
@@ -186,6 +194,23 @@
     'pd.hl.30':          { en: 'Days supply per bottle (2 caps/day)',   pl: 'Dni wystarczy jeden pojemnik (2 kaps./dzień)' },
     'pd.hl.28':          { en: 'Days to visible results',   pl: 'Dni do widocznych efektów' },
     'pd.hl.5in1':        { en: 'Skin, hair, nails, joints &amp; bones',   pl: 'Skóra, włosy, paznokcie, stawy i kości' },
+    /* ====== SERUM ====== */
+    'pd.serum.sub':      { en: 'Rejuvenating Active Serum · 30ml',
+                           pl: 'Odmładzające Aktywne Serum · 30ml' },
+    'pd.serum.h3':       { en: 'Why This Serum?',   pl: 'Dlaczego To Serum?' },
+    'pd.serum.p1':       { en: 'A concentrated formula that delivers active peptides and botanical extracts directly into the deeper layers of the skin. Lightweight and fast-absorbing, it works synergistically with Peptidermax cream to amplify results.',
+                           pl: 'Skoncentrowana formuła dostarczająca aktywne peptydy i ekstrakty botaniczne bezpośrednio do głębszych warstw skóry. Lekka i szybko wchłaniająca się, działa synergistycznie z kremem Peptidermax, wzmacniając rezultaty.' },
+    'pd.serum.p2':       { en: 'The serum targets fine lines, uneven skin texture, and loss of firmness. Used daily, it visibly smooths and rejuvenates skin within weeks.',
+                           pl: 'Serum celuje w drobne zmarszczki, nierówną teksturę skóry i utratę jędrności. Stosowane codziennie, widocznie wygładza i odmładza skórę w ciągu tygodni.' },
+    'pd.serum.hl.size':  { en: 'Approx. 2 months supply',   pl: 'Wystarcza na ok. 2 miesiące' },
+
+    /* ====== UPSELL (3-product set) ====== */
+    'pd.upsell.badge':      { en: 'Best Value — Save €18',   pl: 'Najlepsza Wartość — Oszczędź €18' },
+    'pd.upsell.title':      { en: 'The Complete Set',   pl: 'Pełny Zestaw' },
+    'pd.upsell.desc':       { en: 'Cream + Capsules + Serum — the full regimen for maximum results.',
+                               pl: 'Krem + Kapsułki + Serum — pełna pielęgnacja dla maksymalnych rezultatów.' },
+    'pd.upsell.subscribe':  { en: 'Subscribe €169/mo',   pl: 'Subskrybuj €169/mies.' },
+
     'sticky.addtocart':  { en: 'Add to Cart',   pl: 'Dodaj do Koszyka' },
     'sticky.men':        { en: 'Men\'s Set',   pl: 'Zestaw Męski' },
     'sticky.women':      { en: 'Women\'s Set',   pl: 'Zestaw Damski' }

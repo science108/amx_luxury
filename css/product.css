@@ -470,6 +470,83 @@
   color: var(--white);
 }
 
+/* ---------- Upsell (3-product set) ---------- */
+.pd__upsell {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  border: 2px solid rgba(197, 164, 78, 0.3);
+  border-radius: 8px;
+  background: rgba(197, 164, 78, 0.04);
+  position: relative;
+}
+.pd__upsell-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--black);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+.pd__upsell h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.pd__upsell-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 1.5rem;
+}
+.pd__upsell-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+.pd__upsell-old {
+  font-size: 1.1rem;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+.pd__upsell-amount {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.pd__upsell-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pd__upsell-actions .btn { min-width: 200px; }
+
+.page--light .pd__upsell {
+  border-color: rgba(10, 10, 10, 0.15);
+  background: rgba(10, 10, 10, 0.02);
+}
+.page--light .pd__upsell-desc {
+  color: rgba(10, 10, 10, 0.55);
+}
+.page--light .pd__upsell-old {
+  color: rgba(10, 10, 10, 0.4);
+}
+.page--light .pd__upsell-amount {
+  color: var(--black);
+}
+.page--light .pd__upsell-badge {
+  background: var(--black);
+  color: var(--white);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .ph__grid {

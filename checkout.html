@@ -101,27 +101,67 @@
               <div class="form-field">
                 <label for="country" id="coLblCountry">Country</label>
                 <select id="country">
-                  <option value="DE">Germany</option>
-                  <option value="PL">Poland</option>
-                  <option value="NL">Netherlands</option>
-                  <option value="FR">France</option>
-                  <option value="AT">Austria</option>
-                  <option value="BE">Belgium</option>
-                  <option value="IT">Italy</option>
-                  <option value="ES">Spain</option>
-                  <option value="GB">United Kingdom</option>
-                  <option value="US">United States</option>
-                  <option value="IN">India</option>
-                  <option value="CH">Switzerland</option>
-                  <option value="SE">Sweden</option>
-                  <option value="DK">Denmark</option>
-                  <option value="OTHER">Other</option>
+                  <optgroup label="Poland" id="ogPoland">
+                    <option value="PL" selected>Poland</option>
+                  </optgroup>
+                  <optgroup label="Europe" id="ogEurope">
+                    <option value="DE">Germany</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="FR">France</option>
+                    <option value="AT">Austria</option>
+                    <option value="BE">Belgium</option>
+                    <option value="IT">Italy</option>
+                    <option value="ES">Spain</option>
+                    <option value="PT">Portugal</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="SE">Sweden</option>
+                    <option value="DK">Denmark</option>
+                    <option value="NO">Norway</option>
+                    <option value="FI">Finland</option>
+                    <option value="IE">Ireland</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="HU">Hungary</option>
+                    <option value="GR">Greece</option>
+                    <option value="RO">Romania</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="HR">Croatia</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LV">Latvia</option>
+                    <option value="EE">Estonia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="LU">Luxembourg</option>
+                  </optgroup>
+                  <optgroup label="Rest of World" id="ogWorld">
+                    <option value="US">United States</option>
+                    <option value="MX">Mexico</option>
+                    <option value="IN">India</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="OTHER">Other</option>
+                  </optgroup>
                 </select>
               </div>
               <div class="form-field">
                 <label for="phone" id="coLblPhone">Phone (optional)</label>
                 <input type="tel" id="phone">
               </div>
+            </div>
+            <div class="shipping-option" id="shippingOption" style="display:none">
+              <label class="shipping-option__label">
+                <input type="radio" name="shippingSpeed" value="standard" checked>
+                <span id="shipStdLabel">Standard (3-5 days)</span>
+                <strong id="shipStdPrice"></strong>
+              </label>
+              <label class="shipping-option__label">
+                <input type="radio" name="shippingSpeed" value="express">
+                <span id="shipExpLabel">Express (2-3 days)</span>
+                <strong id="shipExpPrice"></strong>
+              </label>
             </div>
           </div>
 
@@ -205,10 +245,10 @@
           <div class="checkout__place-btn">
             <button class="btn btn--gold btn--lg btn--full" id="placeOrderBtn">Place Order</button>
           </div>
+          <div class="checkout__free-hint" id="freeShipHint" style="display:none"></div>
           <div class="checkout__badges">
             <span>SSL Encrypted</span>
             <span>100% Vegan</span>
-            <span>Free Shipping*</span>
           </div>
         </div>
 
@@ -237,15 +277,70 @@
     function lang() { return localStorage.getItem('amx_lang') || 'en'; }
     function t(en, pl) { return lang() === 'pl' ? pl : en; }
 
+    /* ---- Shipping zones ---- */
+    var EU_CODES = ['DE','NL','FR','AT','BE','IT','ES','PT','GB','CH','SE','DK',
+      'NO','FI','IE','CZ','HU','GR','RO','BG','HR','SK','LT','LV','EE','SI','LU'];
+    var FREE_THRESHOLD = 200;
+
+    function getZone(code) {
+      if (code === 'PL') return 'poland';
+      if (EU_CODES.indexOf(code) !== -1) return 'europe';
+      return 'world';
+    }
+
+    function zoneStandard(zone) {
+      if (zone === 'poland') return 5;
+      if (zone === 'europe') return 10;
+      return 25;
+    }
+
+    function calcShipping(subtotal, hasSub, countryCode, isExpress) {
+      if (hasSub) return 0;
+      if (subtotal >= FREE_THRESHOLD) return 0;
+      var zone = getZone(countryCode);
+      if (isExpress && zone === 'poland') return 15;
+      return zoneStandard(zone);
+    }
+
+    /* ---- Shipping speed toggle (Poland only) ---- */
+    var shippingOptionEl = document.getElementById('shippingOption');
+    var countryEl = document.getElementById('country');
+
+    function updateShippingToggle() {
+      var zone = getZone(countryEl.value);
+      shippingOptionEl.style.display = zone === 'poland' ? 'flex' : 'none';
+      document.getElementById('shipStdPrice').textContent = '€5';
+      document.getElementById('shipExpPrice').textContent = '€15';
+      document.getElementById('shipStdLabel').textContent = t('Standard (3–5 days)', 'Standardowa (3–5 dni)');
+      document.getElementById('shipExpLabel').textContent = t('Express (2–3 days)', 'Ekspres (2–3 dni)');
+    }
+
+    function getSelectedSpeed() {
+      var radios = document.querySelectorAll('input[name="shippingSpeed"]');
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) return radios[i].value;
+      }
+      return 'standard';
+    }
+
+    countryEl.addEventListener('change', function () {
+      updateShippingToggle();
+      renderSummary();
+    });
+    shippingOptionEl.addEventListener('change', function () { renderSummary(); });
+
+    /* ---- Render order summary ---- */
     function renderSummary() {
       var cart = AMX_getCart();
       var P = AMX_PRODUCTS;
       var itemsEl = document.getElementById('summaryItems');
       var totalsEl = document.getElementById('summaryTotals');
+      var hintEl = document.getElementById('freeShipHint');
 
       if (cart.length === 0) {
         itemsEl.innerHTML = '<p style="color:rgba(255,255,255,0.4);padding:2rem 0;text-align:center">' + t('Cart is empty', 'Koszyk jest pusty') + '</p>';
         totalsEl.innerHTML = '';
+        hintEl.style.display = 'none';
         return;
       }
 
@@ -262,24 +357,45 @@
           '<div class="summary-item">' +
             '<img src="' + p.img + '" alt="" class="summary-item__img">' +
             '<div class="summary-item__info">' +
-              '<strong>' + pName + (item.qty > 1 ? ' ×' + item.qty : '') + '</strong>' +
+              '<strong>' + pName + (item.qty > 1 ? ' &times;' + item.qty : '') + '</strong>' +
               '<span>' + (item.isSub ? t('Subscription', 'Subskrypcja') : t('One-time', 'Jednorazowo')) + '</span>' +
             '</div>' +
-            '<span class="summary-item__price">€' + lineTotal + '</span>' +
+            '<span class="summary-item__price">&euro;' + lineTotal + '</span>' +
           '</div>';
       });
       itemsEl.innerHTML = html;
 
       var hasSub = cart.some(function (i) { return i.isSub; });
-      var shipping = hasSub ? 0 : (subtotal >= 100 ? 0 : 9);
+      var isExpress = getSelectedSpeed() === 'express';
+      var country = countryEl.value;
+      var shipping = calcShipping(subtotal, hasSub, country, isExpress);
+      var zone = getZone(country);
+      var baseShipping = zoneStandard(zone);
       var total = subtotal + shipping;
+
+      var shippingLabel;
+      if (shipping === 0 && (hasSub || subtotal >= FREE_THRESHOLD)) {
+        var origCost = isExpress && zone === 'poland' ? 15 : baseShipping;
+        shippingLabel = '<s style="opacity:0.4">&euro;' + origCost + '</s> ' + t('Free', 'Gratis');
+      } else {
+        shippingLabel = '&euro;' + shipping;
+      }
+
       totalsEl.innerHTML =
-        '<div class="summary-line"><span>' + t('Subtotal', 'Produkty') + '</span><span>€' + subtotal + '</span></div>' +
-        '<div class="summary-line"><span>' + t('Shipping', 'Wysyłka') + '</span><span>' + (shipping === 0 ? t('Free', 'Gratis') : '€' + shipping) + '</span></div>' +
-        '<div class="summary-line summary-line--total"><span>' + t('Total', 'Suma') + '</span><span>€' + total + '</span></div>';
+        '<div class="summary-line"><span>' + t('Subtotal', 'Produkty') + '</span><span>&euro;' + subtotal + '</span></div>' +
+        '<div class="summary-line"><span>' + t('Shipping', 'Wysyłka') + '</span><span>' + shippingLabel + '</span></div>' +
+        '<div class="summary-line summary-line--total"><span>' + t('Total', 'Suma') + '</span><span>&euro;' + total + '</span></div>';
+
+      var remaining = FREE_THRESHOLD - subtotal;
+      if (remaining > 0 && !hasSub && shipping > 0) {
+        hintEl.innerHTML = '&#x1F69A; ' + t('Add &euro;' + remaining + ' more for free shipping!', 'Dodaj jeszcze &euro;' + remaining + ' do darmowej wysyłki!');
+        hintEl.style.display = 'block';
+      } else {
+        hintEl.style.display = 'none';
+      }
     }
 
-    /* Account toggle (Guest vs Create Account) */
+    /* ---- Account toggle ---- */
     var btnGuest = document.getElementById('btnGuest');
     var btnAccount = document.getElementById('btnAccount');
     var passRow = document.getElementById('passRow');
@@ -305,7 +421,7 @@
     btnGuest.addEventListener('click', function () { setAccountMode('guest'); });
     btnAccount.addEventListener('click', function () { setAccountMode('account'); });
 
-    /* Payment method toggle */
+    /* ---- Payment method toggle ---- */
     document.querySelectorAll('.pay-method').forEach(function (el) {
       el.addEventListener('click', function () {
         document.querySelectorAll('.pay-method').forEach(function (m) { m.classList.remove('pay-method--selected'); });
@@ -315,7 +431,7 @@
       });
     });
 
-    /* Card number formatting */
+    /* ---- Card formatting ---- */
     var cardInput = document.getElementById('cardNumber');
     if (cardInput) {
       cardInput.addEventListener('input', function () {
@@ -332,7 +448,7 @@
       });
     }
 
-    /* Place order (simulated) */
+    /* ---- Place order (simulated) ---- */
     document.getElementById('placeOrderBtn').addEventListener('click', function () {
       var email = document.getElementById('email').value;
       var fname = document.getElementById('fname').value;
@@ -345,14 +461,12 @@
         alert(t('Your cart is empty.', 'Twój koszyk jest pusty.'));
         return;
       }
-
       localStorage.removeItem('amx_cart');
       document.getElementById('orderSuccess').classList.add('order-success--visible');
     });
 
-    /* i18n for checkout */
+    /* ---- i18n for checkout ---- */
     function localize() {
-      var l = lang();
       document.getElementById('coSec1').textContent = t('Contact', 'Kontakt');
       document.getElementById('btnGuest').textContent = t('Guest', 'Gość');
       document.getElementById('btnAccount').textContent = t('Create Account', 'Załóż Konto');
@@ -379,10 +493,15 @@
         'Twoje zamówienie zostało złożone pomyślnie. Wkrótce otrzymasz email z potwierdzeniem. Przygotowujemy Twoje produkty AMX Luxury z troską.'
       );
       document.getElementById('successBtn').textContent = t('Back to Home', 'Wróć na Stronę');
+      document.getElementById('ogPoland').label = t('Poland', 'Polska');
+      document.getElementById('ogEurope').label = t('Europe', 'Europa');
+      document.getElementById('ogWorld').label = t('Rest of World', 'Reszta Świata');
+      updateShippingToggle();
       renderSummary();
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+      updateShippingToggle();
       renderSummary();
       localize();
 
