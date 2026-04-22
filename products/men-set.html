@@ -26,12 +26,16 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="navLinks">
-        <li><a href="../index.html#story">Our Story</a></li>
-        <li><a href="../index.html#values">Philosophy</a></li>
-        <li><a href="men-set.html" class="nav__link--active">For Him</a></li>
-        <li><a href="women-set.html">For Her</a></li>
-        <li><a href="../index.html#vegan">Why Vegan</a></li>
+        <li><a href="../index.html#story" data-i18n="nav.story">Our Story</a></li>
+        <li><a href="../index.html#values" data-i18n="nav.philosophy">Philosophy</a></li>
+        <li><a href="men-set.html" class="nav__link--active" data-i18n="nav.him">For Him</a></li>
+        <li><a href="women-set.html" data-i18n="nav.her">For Her</a></li>
+        <li><a href="../index.html#vegan" data-i18n="nav.vegan">Why Vegan</a></li>
       </ul>
+      <div class="lang-switch">
+        <button class="lang-switch__btn lang-switch__btn--active" data-lang="en">EN</button>
+        <button class="lang-switch__btn" data-lang="pl">PL</button>
+      </div>
     </div>
   </nav>
 
@@ -54,9 +58,9 @@
         </div>
 
         <div class="ph__info reveal">
-          <div class="ph__badge">Best Value — Save &euro;19</div>
-          <h1 class="ph__title">The Men's Set</h1>
-          <p class="ph__tagline">Complete intimate wellness &mdash; outside &amp; inside.</p>
+          <div class="ph__badge" data-i18n="ph.badge">Best Value — Save &euro;19</div>
+          <h1 class="ph__title" data-i18n="ph.title.men">The Men's Set</h1>
+          <p class="ph__tagline" data-i18n="ph.tagline">Complete intimate wellness &mdash; outside &amp; inside.</p>
 
           <div class="ph__includes">
             <div class="ph__includes-item">
@@ -65,7 +69,7 @@
               </span>
               <div>
                 <strong>Peptidermax Men</strong>
-                <span>Advanced peptide cream &middot; 50ml</span>
+                <span data-i18n="ph.inc.cream">Advanced peptide cream &middot; 50ml</span>
               </div>
             </div>
             <div class="ph__includes-item">
@@ -74,7 +78,7 @@
               </span>
               <div>
                 <strong>CollanActive Q28 Men Complex</strong>
-                <span>Vegan collagen capsules &middot; 60 caps</span>
+                <span data-i18n="ph.inc.caps">Vegan collagen capsules &middot; 60 caps</span>
               </div>
             </div>
           </div>
@@ -82,9 +86,9 @@
           <!-- Pricing toggle -->
           <div class="pricing">
             <div class="pricing__toggle">
-              <button class="pricing__tab pricing__tab--active" data-plan="onetime">One-Time</button>
+              <button class="pricing__tab pricing__tab--active" data-plan="onetime" data-i18n="pricing.onetime">One-Time</button>
               <button class="pricing__tab" data-plan="subscribe">
-                Subscribe &amp; Save
+                <span data-i18n="pricing.subscribe">Subscribe &amp; Save</span>
                 <span class="pricing__tab-badge">-17%</span>
               </button>
             </div>
@@ -92,35 +96,26 @@
             <div class="pricing__plan pricing__plan--active" data-plan="onetime">
               <div class="pricing__price">
                 <span class="pricing__amount">&euro;119</span>
-                <span class="pricing__period">one-time purchase</span>
+                <span class="pricing__period" data-i18n="pricing.once.label">one-time purchase</span>
               </div>
-              <button class="btn btn--gold btn--lg btn--full" data-checkout="set-men-onetime">Add to Cart</button>
+              <button class="btn btn--gold btn--lg btn--full" data-checkout="set-men-onetime" data-i18n="pricing.addtocart">Add to Cart</button>
             </div>
 
             <div class="pricing__plan" data-plan="subscribe">
               <div class="pricing__price">
                 <span class="pricing__amount">&euro;99</span>
-                <span class="pricing__period">/ month</span>
-                <span class="pricing__save">Save &euro;20 every month</span>
+                <span class="pricing__period" data-i18n="pricing.mo">/ month</span>
+                <span class="pricing__save" data-i18n="pricing.save20">Save &euro;20 every month</span>
               </div>
-              <button class="btn btn--gold btn--lg btn--full" data-checkout="set-men-sub">Subscribe Now</button>
-              <p class="pricing__note">Cancel anytime. Free shipping on subscriptions.</p>
+              <button class="btn btn--gold btn--lg btn--full" data-checkout="set-men-sub" data-i18n="pricing.subnow">Subscribe Now</button>
+              <p class="pricing__note" data-i18n="pricing.note">Cancel anytime. Free shipping on subscriptions.</p>
             </div>
           </div>
 
           <div class="ph__trust">
-            <span>
-              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg>
-              100% Vegan
-            </span>
-            <span>
-              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg>
-              Lab-Proven
-            </span>
-            <span>
-              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg>
-              Cruelty-Free
-            </span>
+            <span><svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg> <span data-i18n="trust.vegan">100% Vegan</span></span>
+            <span><svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg> <span data-i18n="trust.lab">Lab-Proven</span></span>
+            <span><svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg> <span data-i18n="trust.cruelty">Cruelty-Free</span></span>
           </div>
         </div>
       </div>
@@ -137,29 +132,29 @@
           <img src="../images/peptidermox-men.png" alt="Peptidermax Men" class="pd__product-thumb">
           <div>
             <h2>Peptidermax <em>Men</em></h2>
-            <p class="pd__product-sub">Advanced Peptide Rejuvenating Cream &middot; 50ml</p>
+            <p class="pd__product-sub" data-i18n="pd.cream.sub">Advanced Peptide Rejuvenating Cream &middot; 50ml</p>
           </div>
         </div>
 
         <div class="pd__grid reveal">
           <div class="pd__description">
-            <h3>Why This Cream?</h3>
-            <p>Peptidermax is a multi-functional rejuvenating cream formulated for daily use, morning and night. Enriched with cutting-edge active peptides, it visibly improves skin condition and restores a healthy, youthful appearance.</p>
-            <p>The formula actively supports collagen and elastin production &mdash; the key proteins for skin strength, elasticity, and firmness. Regular use reduces visible wrinkles and increases skin firmness.</p>
+            <h3 data-i18n="pd.cream.h3">Why This Cream?</h3>
+            <p data-i18n="pd.cream.p1">Peptidermax is a multi-functional rejuvenating cream formulated for daily use, morning and night. Enriched with cutting-edge active peptides, it visibly improves skin condition and restores a healthy, youthful appearance.</p>
+            <p data-i18n="pd.cream.p2">The formula actively supports collagen and elastin production &mdash; the key proteins for skin strength, elasticity, and firmness. Regular use reduces visible wrinkles and increases skin firmness.</p>
 
-            <h3>Key Active Ingredients</h3>
+            <h3 data-i18n="pd.ingredients.title">Key Active Ingredients</h3>
             <div class="pd__ingredients">
               <div class="pd__ingredient">
                 <h4>Neodermyl</h4>
-                <p>Known as the "needle in a cream" &mdash; a bioactive peptide that stimulates collagen and elastin production. A non-invasive alternative to injections with visible rejuvenation results.</p>
+                <p data-i18n="pd.neo.text">Known as the "needle in a cream" &mdash; a bioactive peptide that stimulates collagen and elastin production. A non-invasive alternative to injections with visible rejuvenation results.</p>
               </div>
               <div class="pd__ingredient">
                 <h4>Argirelina</h4>
-                <p>Acetyl Hexapeptide-8 &mdash; the vegan botox. Relaxes facial muscles to smooth expression lines and prevent new wrinkles, especially on the forehead and around the eyes.</p>
+                <p data-i18n="pd.argi.text">Acetyl Hexapeptide-8 &mdash; the vegan botox. Relaxes facial muscles to smooth expression lines and prevent new wrinkles, especially on the forehead and around the eyes.</p>
               </div>
               <div class="pd__ingredient">
                 <h4>Hemp Seed Oil &amp; CBD</h4>
-                <p>Natural plant-based nourishment that deeply hydrates and supports the skin's barrier function.</p>
+                <p data-i18n="pd.hemp.text">Natural plant-based nourishment that deeply hydrates and supports the skin's barrier function.</p>
               </div>
             </div>
           </div>
@@ -167,27 +162,27 @@
           <div class="pd__highlights">
             <div class="pd__highlight-card">
               <span class="pd__highlight-num">3 mo</span>
-              <span class="pd__highlight-label">One jar lasts approx. 3 months</span>
+              <span class="pd__highlight-label" data-i18n="pd.hl.3mo">One jar lasts approx. 3 months</span>
             </div>
             <div class="pd__highlight-card">
               <span class="pd__highlight-num">2x</span>
-              <span class="pd__highlight-label">Apply daily &mdash; morning &amp; evening</span>
+              <span class="pd__highlight-label" data-i18n="pd.hl.2x">Apply daily &mdash; morning &amp; evening</span>
             </div>
             <div class="pd__highlight-card">
               <span class="pd__highlight-num">0%</span>
-              <span class="pd__highlight-label">Animal-derived ingredients</span>
+              <span class="pd__highlight-label" data-i18n="pd.hl.0pct">Animal-derived ingredients</span>
             </div>
 
             <div class="pd__buy-single">
-              <p class="pd__buy-single-label">Buy Separately</p>
+              <p class="pd__buy-single-label" data-i18n="pd.buy.label">Buy Separately</p>
               <div class="pricing__mini">
                 <div class="pricing__mini-row">
-                  <span>&euro;69 one-time</span>
-                  <button class="btn btn--outline btn--sm" data-checkout="cream-men-onetime">Buy</button>
+                  <span>&euro;69 <span data-i18n="pricing.onetime">one-time</span></span>
+                  <button class="btn btn--outline btn--sm" data-checkout="cream-men-onetime" data-i18n="pd.buy.buy">Buy</button>
                 </div>
                 <div class="pricing__mini-row">
-                  <span>&euro;59/mo <em>subscribe</em></span>
-                  <button class="btn btn--outline btn--sm" data-checkout="cream-men-sub">Subscribe</button>
+                  <span>&euro;59/mo <em data-i18n="pd.buy.subscribe">subscribe</em></span>
+                  <button class="btn btn--outline btn--sm" data-checkout="cream-men-sub" data-i18n="pd.buy.sub">Subscribe</button>
                 </div>
               </div>
             </div>
@@ -203,33 +198,33 @@
           <img src="../images/collasax-men.png" alt="CollanActive Q28 Men Complex" class="pd__product-thumb">
           <div>
             <h2>CollanActive Q28 <em>Men Complex</em></h2>
-            <p class="pd__product-sub">Vegan Collagen Activator Capsules &middot; 60 caps</p>
+            <p class="pd__product-sub" data-i18n="pd.caps.sub">Vegan Collagen Activator Capsules &middot; 60 caps</p>
           </div>
         </div>
 
         <div class="pd__grid reveal">
           <div class="pd__description">
-            <h3>Why These Capsules?</h3>
-            <p>CollanActive Q28 Complex is a unique formula combining a full spectrum of amino acids with key ingredients supporting natural beauty and joint comfort. Instead of consuming animal collagen, you activate your own body's collagen production.</p>
-            <p>Vitamin C supports proper collagen production, zinc maintains healthy skin, hair, and nails, while biotin supports their natural condition. Hyaluronic acid, glucosamine, and curcumin maintain joint comfort and mobility.</p>
+            <h3 data-i18n="pd.caps.h3">Why These Capsules?</h3>
+            <p data-i18n="pd.caps.p1">CollanActive Q28 Complex is a unique formula combining a full spectrum of amino acids with key ingredients supporting natural beauty and joint comfort. Instead of consuming animal collagen, you activate your own body's collagen production.</p>
+            <p data-i18n="pd.caps.p2">Vitamin C supports proper collagen production, zinc maintains healthy skin, hair, and nails, while biotin supports their natural condition. Hyaluronic acid, glucosamine, and curcumin maintain joint comfort and mobility.</p>
 
-            <h3>Key Active Ingredients</h3>
+            <h3 data-i18n="pd.ingredients.title">Key Active Ingredients</h3>
             <div class="pd__ingredients">
               <div class="pd__ingredient">
                 <h4>18 Amino Acids</h4>
-                <p>Including L-Glycine, L-Proline, and Hydroxyproline &mdash; the essential building blocks of collagen that make up its triple-helix structure for skin strength and elasticity.</p>
+                <p data-i18n="pd.amino.text">Including L-Glycine, L-Proline, and Hydroxyproline &mdash; the essential building blocks of collagen that make up its triple-helix structure for skin strength and elasticity.</p>
               </div>
               <div class="pd__ingredient">
                 <h4>Hyaluronic Acid</h4>
-                <p>Natural component of synovial fluid &mdash; provides hydration and elasticity to joints while deeply moisturizing skin from within.</p>
+                <p data-i18n="pd.ha.text">Natural component of synovial fluid &mdash; provides hydration and elasticity to joints while deeply moisturizing skin from within.</p>
               </div>
               <div class="pd__ingredient">
                 <h4>Curcumin (95%)</h4>
-                <p>Standardized turmeric extract with powerful antioxidant properties, traditionally used in Ayurveda for centuries.</p>
+                <p data-i18n="pd.curc.text">Standardized turmeric extract with powerful antioxidant properties, traditionally used in Ayurveda for centuries.</p>
               </div>
               <div class="pd__ingredient">
                 <h4>Bamboo Silica (70%)</h4>
-                <p>Organic silicon from bamboo shoots &mdash; participates in collagen and elastin synthesis, supporting skin firmness, hair strength, and nail health.</p>
+                <p data-i18n="pd.bamboo.text">Organic silicon from bamboo shoots &mdash; participates in collagen and elastin synthesis, supporting skin firmness, hair strength, and nail health.</p>
               </div>
             </div>
           </div>
@@ -237,27 +232,27 @@
           <div class="pd__highlights">
             <div class="pd__highlight-card">
               <span class="pd__highlight-num">30</span>
-              <span class="pd__highlight-label">Days supply per bottle (2 caps/day)</span>
+              <span class="pd__highlight-label" data-i18n="pd.hl.30">Days supply per bottle (2 caps/day)</span>
             </div>
             <div class="pd__highlight-card">
               <span class="pd__highlight-num">28</span>
-              <span class="pd__highlight-label">Days to visible results</span>
+              <span class="pd__highlight-label" data-i18n="pd.hl.28">Days to visible results</span>
             </div>
             <div class="pd__highlight-card">
               <span class="pd__highlight-num">5-in-1</span>
-              <span class="pd__highlight-label">Skin, hair, nails, joints &amp; bones</span>
+              <span class="pd__highlight-label" data-i18n="pd.hl.5in1">Skin, hair, nails, joints &amp; bones</span>
             </div>
 
             <div class="pd__buy-single">
-              <p class="pd__buy-single-label">Buy Separately</p>
+              <p class="pd__buy-single-label" data-i18n="pd.buy.label">Buy Separately</p>
               <div class="pricing__mini">
                 <div class="pricing__mini-row">
-                  <span>&euro;69 one-time</span>
-                  <button class="btn btn--outline btn--sm" data-checkout="caps-men-onetime">Buy</button>
+                  <span>&euro;69 <span data-i18n="pricing.onetime">one-time</span></span>
+                  <button class="btn btn--outline btn--sm" data-checkout="caps-men-onetime" data-i18n="pd.buy.buy">Buy</button>
                 </div>
                 <div class="pricing__mini-row">
-                  <span>&euro;59/mo <em>subscribe</em></span>
-                  <button class="btn btn--outline btn--sm" data-checkout="caps-men-sub">Subscribe</button>
+                  <span>&euro;59/mo <em data-i18n="pd.buy.subscribe">subscribe</em></span>
+                  <button class="btn btn--outline btn--sm" data-checkout="caps-men-sub" data-i18n="pd.buy.sub">Subscribe</button>
                 </div>
               </div>
             </div>
@@ -273,12 +268,12 @@
     <div class="container">
       <div class="sticky-bar__inner">
         <div class="sticky-bar__info">
-          <strong>Men's Set</strong>
+          <strong data-i18n="sticky.men">Men's Set</strong>
           <span>Peptidermax + CollanActive Q28</span>
         </div>
         <div class="sticky-bar__action">
           <span class="sticky-bar__price">&euro;119</span>
-          <button class="btn btn--gold btn--sm" data-checkout="set-men-onetime">Add to Cart</button>
+          <button class="btn btn--gold btn--sm" data-checkout="set-men-onetime" data-i18n="sticky.addtocart">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -290,44 +285,45 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="../index.html" class="footer__logo">AMX <span>Luxury</span></a>
-          <p>Luxury without compromise.<br>Science without cruelty.</p>
+          <p data-i18n="footer.tagline">Luxury without compromise.<br>Science without cruelty.</p>
         </div>
         <div class="footer__links">
-          <h4>Explore</h4>
+          <h4 data-i18n="footer.explore">Explore</h4>
           <ul>
-            <li><a href="../index.html#story">Our Story</a></li>
-            <li><a href="../index.html#values">Philosophy</a></li>
-            <li><a href="men-set.html">Men's Set</a></li>
-            <li><a href="women-set.html">Women's Set</a></li>
+            <li><a href="../index.html#story" data-i18n="nav.story">Our Story</a></li>
+            <li><a href="../index.html#values" data-i18n="nav.philosophy">Philosophy</a></li>
+            <li><a href="men-set.html" data-i18n="footer.men">Men's Set</a></li>
+            <li><a href="women-set.html" data-i18n="footer.women">Women's Set</a></li>
           </ul>
         </div>
         <div class="footer__links">
-          <h4>Connect</h4>
+          <h4 data-i18n="footer.connect">Connect</h4>
           <ul>
             <li><a href="#">Instagram</a></li>
             <li><a href="#">YouTube</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" data-i18n="footer.contact">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer__newsletter">
-          <h4>Stay in Touch</h4>
-          <p>Be the first to know about new products and exclusive offers.</p>
+          <h4 data-i18n="footer.newsletter">Stay in Touch</h4>
+          <p data-i18n="footer.nl.text">Be the first to know about new products and exclusive offers.</p>
           <form class="footer__form" onsubmit="return false;">
-            <input type="email" placeholder="Your email" aria-label="Email address" required>
-            <button type="submit" class="btn btn--gold btn--sm">Join</button>
+            <input type="email" placeholder="Your email" aria-label="Email address" required data-i18n-ph="footer.nl.ph">
+            <button type="submit" class="btn btn--gold btn--sm" data-i18n="footer.nl.btn">Join</button>
           </form>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 AMX Luxury. All rights reserved.</p>
+        <p data-i18n="footer.copy">&copy; 2026 AMX Luxury. All rights reserved.</p>
         <div class="footer__badges">
-          <span>Vegan</span><span>Cruelty-Free</span><span>Lab-Proven</span>
+          <span data-i18n="trust.vegan">Vegan</span><span data-i18n="trust.cruelty">Cruelty-Free</span><span data-i18n="trust.lab">Lab-Proven</span>
         </div>
       </div>
     </div>
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
   <script src="../js/checkout.js"></script>
 </body>
 </html>
