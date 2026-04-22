@@ -39,12 +39,33 @@
           <!-- Contact -->
           <div class="checkout__form-section">
             <h2 id="coSec1">Contact</h2>
+
+            <div class="checkout__account-toggle" id="accountToggle">
+              <button class="toggle-btn toggle-btn--active" data-mode="guest" id="btnGuest">Guest</button>
+              <button class="toggle-btn" data-mode="account" id="btnAccount">Create Account</button>
+            </div>
+
             <div class="form-row form-row--full">
               <div class="form-field">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="you@example.com" required>
               </div>
             </div>
+
+            <div class="checkout__pass-row" id="passRow">
+              <p class="checkout__pass-hint" id="passHint">Save your details for faster checkout next time.</p>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="password" id="coLblPass">Password</label>
+                  <input type="password" id="password" placeholder="Min. 8 characters" minlength="8">
+                </div>
+                <div class="form-field">
+                  <label for="passwordConfirm" id="coLblPassConfirm">Confirm password</label>
+                  <input type="password" id="passwordConfirm" placeholder="">
+                </div>
+              </div>
+            </div>
+
             <div class="form-row">
               <div class="form-field">
                 <label for="fname" id="coLblFirst">First name</label>
@@ -258,6 +279,32 @@
         '<div class="summary-line summary-line--total"><span>' + t('Total', 'Suma') + '</span><span>€' + total + '</span></div>';
     }
 
+    /* Account toggle (Guest vs Create Account) */
+    var btnGuest = document.getElementById('btnGuest');
+    var btnAccount = document.getElementById('btnAccount');
+    var passRow = document.getElementById('passRow');
+    var passInput = document.getElementById('password');
+    var passConfirm = document.getElementById('passwordConfirm');
+
+    function setAccountMode(mode) {
+      var isAccount = mode === 'account';
+      btnGuest.classList.toggle('toggle-btn--active', !isAccount);
+      btnAccount.classList.toggle('toggle-btn--active', isAccount);
+      passRow.classList.toggle('checkout__pass-row--open', isAccount);
+      if (isAccount) {
+        passInput.setAttribute('required', '');
+        passConfirm.setAttribute('required', '');
+      } else {
+        passInput.removeAttribute('required');
+        passConfirm.removeAttribute('required');
+        passInput.value = '';
+        passConfirm.value = '';
+      }
+    }
+
+    btnGuest.addEventListener('click', function () { setAccountMode('guest'); });
+    btnAccount.addEventListener('click', function () { setAccountMode('account'); });
+
     /* Payment method toggle */
     document.querySelectorAll('.pay-method').forEach(function (el) {
       el.addEventListener('click', function () {
@@ -307,6 +354,11 @@
     function localize() {
       var l = lang();
       document.getElementById('coSec1').textContent = t('Contact', 'Kontakt');
+      document.getElementById('btnGuest').textContent = t('Guest', 'Gość');
+      document.getElementById('btnAccount').textContent = t('Create Account', 'Załóż Konto');
+      document.getElementById('passHint').textContent = t('Save your details for faster checkout next time.', 'Zapisz swoje dane, aby następnym razem kupować szybciej.');
+      document.getElementById('coLblPass').textContent = t('Password', 'Hasło');
+      document.getElementById('coLblPassConfirm').textContent = t('Confirm password', 'Potwierdź hasło');
       document.getElementById('coSec2').textContent = t('Shipping Address', 'Adres Dostawy');
       document.getElementById('coSec3').textContent = t('Payment', 'Płatność');
       document.getElementById('coLblFirst').textContent = t('First name', 'Imię');
