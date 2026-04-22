@@ -97,10 +97,10 @@
     'set.save.complete': { en: 'save €18',   pl: 'oszczędź €18' },
     'set.cta.men':       { en: 'Order Men\'s Set',   pl: 'Zamów Zestaw Męski' },
     'set.cta.women':     { en: 'Order Women\'s Set',   pl: 'Zamów Zestaw Damski' },
-    'set.sub.hint':      { en: 'or <a href="products/men-set.html">subscribe from €99/mo</a>',
-                           pl: 'lub <a href="products/men-set.html">subskrybuj od €99/mies.</a>' },
-    'set.sub.hint.w':    { en: 'or <a href="products/women-set.html">subscribe from €99/mo</a>',
-                           pl: 'lub <a href="products/women-set.html">subskrybuj od €99/mies.</a>' },
+    'set.sub.hint':      { en: 'or <a href="products/men-set.html">subscribe from €169/mo</a>',
+                           pl: 'lub <a href="products/men-set.html">subskrybuj od €169/mies.</a>' },
+    'set.sub.hint.w':    { en: 'or <a href="products/women-set.html">subscribe from €169/mo</a>',
+                           pl: 'lub <a href="products/women-set.html">subskrybuj od €169/mies.</a>' },
 
     /* ====== VEGAN SECTION ====== */
     'vegan.label':       { en: 'Why It Matters',   pl: 'Dlaczego To Ważne' },
@@ -132,7 +132,7 @@
     'footer.women':      { en: 'Women\'s Set',   pl: 'Zestaw Damski' },
 
     /* ====== PRODUCT PAGES (shared) ====== */
-    'ph.badge':          { en: 'Best Value — Save €9',   pl: 'Najlepsza Wartość — Oszczędź €9' },
+    'ph.badge':          { en: 'Best Value — Save €18',   pl: 'Najlepsza Wartość — Oszczędź €18' },
     'ph.title.men':      { en: 'The Men\'s Set',   pl: 'Zestaw Męski' },
     'ph.title.women':    { en: 'The Women\'s Set',   pl: 'Zestaw Damski' },
     'ph.tagline':        { en: 'Complete intimate wellness — outside &amp; inside.',
@@ -141,11 +141,14 @@
                            pl: 'Zaawansowany krem peptydowy · 50ml' },
     'ph.inc.caps':       { en: 'Vegan collagen capsules · 60 caps',
                            pl: 'Wegańskie kapsułki kolagenowe · 60 szt.' },
+    'ph.inc.serum':      { en: 'Rejuvenating active serum · 30ml',
+                           pl: 'Odmładzające aktywne serum · 30ml' },
     'pricing.onetime':   { en: 'One-Time',   pl: 'Jednorazowo' },
     'pricing.subscribe': { en: 'Subscribe &amp; Save',   pl: 'Subskrybuj &amp; Oszczędzaj' },
     'pricing.once.label':{ en: 'one-time purchase',   pl: 'zakup jednorazowy' },
     'pricing.mo':        { en: '/ month',   pl: '/ miesiąc' },
     'pricing.save20':    { en: 'Save €20 every month',   pl: 'Oszczędzasz €20 każdego miesiąca' },
+    'pricing.save30':    { en: 'Save €30 every month',   pl: 'Oszczędzasz €30 każdego miesiąca' },
     'pricing.addtocart': { en: 'Add to Cart',   pl: 'Dodaj do Koszyka' },
     'pricing.subnow':    { en: 'Subscribe Now',   pl: 'Subskrybuj Teraz' },
     'pricing.note':      { en: 'Cancel anytime. Free shipping on all subscriptions.',

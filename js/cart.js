@@ -7,8 +7,8 @@
   var BASE = location.pathname.indexOf('/products/') !== -1 ? '../' : '';
 
   var PRODUCTS = {
-    'set-men':          { name: 'Men\'s Set',           namePl: 'Zestaw Męski',          price: 119, priceSub: 99,  img: 'images/peptidermox-men.png',   desc: 'Peptidermax + CollanActive Q28',              descPl: 'Peptidermax + CollanActive Q28' },
-    'set-women':        { name: 'Women\'s Set',         namePl: 'Zestaw Damski',         price: 119, priceSub: 99,  img: 'images/peptidermox-women.png', desc: 'Peptidermax + Collasax Q28',                  descPl: 'Peptidermax + Collasax Q28' },
+    'set-men':          { name: 'Men\'s Set',           namePl: 'Zestaw Męski',          price: 199, priceSub: 169, img: 'images/peptidermox-men.png',   desc: 'Cream + Capsules + Serum · Save €18',         descPl: 'Krem + Kapsułki + Serum · Oszczędź €18' },
+    'set-women':        { name: 'Women\'s Set',         namePl: 'Zestaw Damski',         price: 199, priceSub: 169, img: 'images/peptidermox-women.png', desc: 'Cream + Capsules + Serum · Save €18',         descPl: 'Krem + Kapsułki + Serum · Oszczędź €18' },
     'set-3-men':        { name: 'Men\'s Complete Set',  namePl: 'Pełny Zestaw Męski',    price: 199, priceSub: 169, img: 'images/peptidermox-men.png',   desc: 'Cream + Capsules + Serum · Save €18',         descPl: 'Krem + Kapsułki + Serum · Oszczędź €18' },
     'set-3-women':      { name: 'Women\'s Complete Set',namePl: 'Pełny Zestaw Damski',   price: 199, priceSub: 169, img: 'images/peptidermox-women.png', desc: 'Cream + Capsules + Serum · Save €18',         descPl: 'Krem + Kapsułki + Serum · Oszczędź €18' },
     'set-cs-men':       { name: 'Cream + Serum Men',    namePl: 'Krem + Serum Męski',    price: 149, priceSub: 125, img: 'images/peptidermox-men.png',   desc: 'Peptidermax + Serum · Save €19',              descPl: 'Peptidermax + Serum · Oszczędź €19' },
