@@ -37,6 +37,8 @@
     updateBadge();
   }
   window.AMX_getCart = getCart;
+  window.AMX_updateQty = updateQty;
+  window.AMX_removeItem = removeItem;
 
   function addItem(productId, isSub) {
     var cart = getCart();

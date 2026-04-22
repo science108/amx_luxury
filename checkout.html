@@ -250,6 +250,7 @@
             <span>SSL Encrypted</span>
             <span>100% Vegan</span>
           </div>
+          <a href="index.html" class="checkout__continue" id="continueLink">&larr; Continue Shopping</a>
         </div>
 
       </div>
@@ -357,13 +358,34 @@
           '<div class="summary-item">' +
             '<img src="' + p.img + '" alt="" class="summary-item__img">' +
             '<div class="summary-item__info">' +
-              '<strong>' + pName + (item.qty > 1 ? ' &times;' + item.qty : '') + '</strong>' +
+              '<strong>' + pName + '</strong>' +
               '<span>' + (item.isSub ? t('Subscription', 'Subskrypcja') : t('One-time', 'Jednorazowo')) + '</span>' +
+              '<div class="summary-item__controls">' +
+                '<button class="summary-item__qty-btn" data-key="' + item.key + '" data-delta="-1">&minus;</button>' +
+                '<span>' + item.qty + '</span>' +
+                '<button class="summary-item__qty-btn" data-key="' + item.key + '" data-delta="1">+</button>' +
+              '</div>' +
             '</div>' +
-            '<span class="summary-item__price">&euro;' + lineTotal + '</span>' +
+            '<div class="summary-item__right">' +
+              '<span class="summary-item__price">&euro;' + lineTotal + '</span>' +
+              '<button class="summary-item__remove" data-remove="' + item.key + '" aria-label="Remove">&times;</button>' +
+            '</div>' +
           '</div>';
       });
       itemsEl.innerHTML = html;
+
+      itemsEl.querySelectorAll('.summary-item__qty-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          AMX_updateQty(btn.getAttribute('data-key'), parseInt(btn.getAttribute('data-delta')));
+          renderSummary();
+        });
+      });
+      itemsEl.querySelectorAll('.summary-item__remove').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          AMX_removeItem(btn.getAttribute('data-remove'));
+          renderSummary();
+        });
+      });
 
       var hasSub = cart.some(function (i) { return i.isSub; });
       var isExpress = getSelectedSpeed() === 'express';
@@ -493,6 +515,7 @@
         'Twoje zamówienie zostało złożone pomyślnie. Wkrótce otrzymasz email z potwierdzeniem. Przygotowujemy Twoje produkty AMX Luxury z troską.'
       );
       document.getElementById('successBtn').textContent = t('Back to Home', 'Wróć na Stronę');
+      document.getElementById('continueLink').innerHTML = '&larr; ' + t('Continue Shopping', 'Kontynuuj Zakupy');
       document.getElementById('ogPoland').label = t('Poland', 'Polska');
       document.getElementById('ogEurope').label = t('Europe', 'Europa');
       document.getElementById('ogWorld').label = t('Rest of World', 'Reszta Świata');
