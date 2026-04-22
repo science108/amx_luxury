@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women's Wellness Set — AMX Luxury</title>
+  <meta name="description" content="Peptidermax Women cream + Collasax Q28 Women. Complete intimate wellness from outside &amp; inside. 100% vegan, lab-proven.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon.png">
+  <meta property="og:title" content="Women's Wellness Set — AMX Luxury">
+  <meta property="og:image" content="https://science108.github.io/amx_luxury/images/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/product.css">
+</head>
+<body class="page--light">
+
+  <!-- NAV -->
+  <nav class="nav nav--scrolled">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">AMX <span>Luxury</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../index.html#story">Our Story</a></li>
+        <li><a href="../index.html#values">Philosophy</a></li>
+        <li><a href="men-set.html">For Him</a></li>
+        <li><a href="women-set.html" class="nav__link--active">For Her</a></li>
+        <li><a href="../index.html#vegan">Why Vegan</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO PRODUCT -->
+  <header class="ph">
+    <div class="container">
+      <div class="ph__grid">
+        <div class="ph__images reveal">
+          <div class="ph__image-main">
+            <img src="../images/peptidermox-women.png" alt="Peptidermax Women cream" id="heroImg">
+          </div>
+          <div class="ph__thumbs">
+            <button class="ph__thumb ph__thumb--active" onclick="switchImage(this, '../images/peptidermox-women.png')">
+              <img src="../images/peptidermox-women.png" alt="Peptidermax Women">
+            </button>
+            <button class="ph__thumb" onclick="switchImage(this, '../images/collasax-women.png')">
+              <img src="../images/collasax-women.png" alt="Collasax Q28 Women">
+            </button>
+          </div>
+        </div>
+
+        <div class="ph__info reveal">
+          <div class="ph__badge">Best Value — Save &euro;19</div>
+          <h1 class="ph__title">The Women's Set</h1>
+          <p class="ph__tagline">Complete intimate wellness &mdash; outside &amp; inside.</p>
+
+          <div class="ph__includes">
+            <div class="ph__includes-item">
+              <span class="ph__includes-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Peptidermax Women</strong>
+                <span>Advanced peptide cream &middot; 50ml</span>
+              </div>
+            </div>
+            <div class="ph__includes-item">
+              <span class="ph__includes-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Collasax Q28 Women</strong>
+                <span>Vegan collagen capsules &middot; 60 caps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pricing toggle -->
+          <div class="pricing">
+            <div class="pricing__toggle">
+              <button class="pricing__tab pricing__tab--active" data-plan="onetime">One-Time</button>
+              <button class="pricing__tab" data-plan="subscribe">
+                Subscribe &amp; Save
+                <span class="pricing__tab-badge">-17%</span>
+              </button>
+            </div>
+
+            <div class="pricing__plan pricing__plan--active" data-plan="onetime">
+              <div class="pricing__price">
+                <span class="pricing__amount">&euro;119</span>
+                <span class="pricing__period">one-time purchase</span>
+              </div>
+              <button class="btn btn--dark btn--lg btn--full" data-checkout="set-women-onetime">Add to Cart</button>
+            </div>
+
+            <div class="pricing__plan" data-plan="subscribe">
+              <div class="pricing__price">
+                <span class="pricing__amount">&euro;99</span>
+                <span class="pricing__period">/ month</span>
+                <span class="pricing__save">Save &euro;20 every month</span>
+              </div>
+              <button class="btn btn--dark btn--lg btn--full" data-checkout="set-women-sub">Subscribe Now</button>
+              <p class="pricing__note">Cancel anytime. Free shipping on subscriptions.</p>
+            </div>
+          </div>
+
+          <div class="ph__trust">
+            <span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg>
+              100% Vegan
+            </span>
+            <span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg>
+              Lab-Proven
+            </span>
+            <span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.5L10 13.27 5.06 16.1 6 10.6 2 6.7l5.61-.86L10 1z"/></svg>
+              Cruelty-Free
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRODUCT DETAILS -->
+  <section class="pd" id="details">
+    <div class="container">
+
+      <!-- PRODUCT 1: Peptidermax -->
+      <div class="pd__product" id="peptidermax">
+        <div class="pd__product-header reveal">
+          <img src="../images/peptidermox-women.png" alt="Peptidermax Women" class="pd__product-thumb">
+          <div>
+            <h2>Peptidermax <em>Women</em></h2>
+            <p class="pd__product-sub">Advanced Peptide Rejuvenating Cream &middot; 50ml</p>
+          </div>
+        </div>
+
+        <div class="pd__grid reveal">
+          <div class="pd__description">
+            <h3>Why This Cream?</h3>
+            <p>Peptidermax is a multi-functional rejuvenating cream formulated for daily use, morning and night. Enriched with cutting-edge active peptides, it visibly improves skin condition and restores a healthy, youthful appearance.</p>
+            <p>The formula actively supports collagen and elastin production &mdash; the key proteins for skin strength, elasticity, and firmness. Regular use reduces visible wrinkles and increases skin firmness.</p>
+
+            <h3>Key Active Ingredients</h3>
+            <div class="pd__ingredients">
+              <div class="pd__ingredient">
+                <h4>Neodermyl</h4>
+                <p>Known as the "needle in a cream" &mdash; a bioactive peptide that stimulates collagen and elastin production. A non-invasive alternative to injections with visible rejuvenation results.</p>
+              </div>
+              <div class="pd__ingredient">
+                <h4>Argirelina</h4>
+                <p>Acetyl Hexapeptide-8 &mdash; the vegan botox. Relaxes facial muscles to smooth expression lines and prevent new wrinkles, especially on the forehead and around the eyes.</p>
+              </div>
+              <div class="pd__ingredient">
+                <h4>Hemp Seed Oil &amp; CBD</h4>
+                <p>Natural plant-based nourishment that deeply hydrates and supports the skin's barrier function.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pd__highlights">
+            <div class="pd__highlight-card">
+              <span class="pd__highlight-num">3 mo</span>
+              <span class="pd__highlight-label">One jar lasts approx. 3 months</span>
+            </div>
+            <div class="pd__highlight-card">
+              <span class="pd__highlight-num">2x</span>
+              <span class="pd__highlight-label">Apply daily &mdash; morning &amp; evening</span>
+            </div>
+            <div class="pd__highlight-card">
+              <span class="pd__highlight-num">0%</span>
+              <span class="pd__highlight-label">Animal-derived ingredients</span>
+            </div>
+
+            <div class="pd__buy-single">
+              <p class="pd__buy-single-label">Buy Separately</p>
+              <div class="pricing__mini">
+                <div class="pricing__mini-row">
+                  <span>&euro;69 one-time</span>
+                  <button class="btn btn--outline btn--sm" data-checkout="cream-women-onetime">Buy</button>
+                </div>
+                <div class="pricing__mini-row">
+                  <span>&euro;59/mo <em>subscribe</em></span>
+                  <button class="btn btn--outline btn--sm" data-checkout="cream-women-sub">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pd__separator"></div>
+
+      <!-- PRODUCT 2: Collasax Q28 -->
+      <div class="pd__product" id="collanactive">
+        <div class="pd__product-header reveal">
+          <img src="../images/collasax-women.png" alt="Collasax Q28 Women" class="pd__product-thumb">
+          <div>
+            <h2>Collasax Q28 <em>Women</em></h2>
+            <p class="pd__product-sub">Vegan Collagen Activator Capsules &middot; 60 caps</p>
+          </div>
+        </div>
+
+        <div class="pd__grid reveal">
+          <div class="pd__description">
+            <h3>Why These Capsules?</h3>
+            <p>Collasax Q28 Complex is a unique formula combining a full spectrum of amino acids with key ingredients supporting natural beauty and joint comfort. Instead of consuming animal collagen, you activate your own body's collagen production.</p>
+            <p>Vitamin C supports proper collagen production, zinc maintains healthy skin, hair, and nails, while biotin supports their natural condition. Hyaluronic acid, glucosamine, and curcumin maintain joint comfort and mobility.</p>
+
+            <h3>Key Active Ingredients</h3>
+            <div class="pd__ingredients">
+              <div class="pd__ingredient">
+                <h4>18 Amino Acids</h4>
+                <p>Including L-Glycine, L-Proline, and Hydroxyproline &mdash; the essential building blocks of collagen that make up its triple-helix structure for skin strength and elasticity.</p>
+              </div>
+              <div class="pd__ingredient">
+                <h4>Hyaluronic Acid</h4>
+                <p>Natural component of synovial fluid &mdash; provides hydration and elasticity to joints while deeply moisturizing skin from within.</p>
+              </div>
+              <div class="pd__ingredient">
+                <h4>Curcumin (95%)</h4>
+                <p>Standardized turmeric extract with powerful antioxidant properties, traditionally used in Ayurveda for centuries.</p>
+              </div>
+              <div class="pd__ingredient">
+                <h4>Bamboo Silica (70%)</h4>
+                <p>Organic silicon from bamboo shoots &mdash; participates in collagen and elastin synthesis, supporting skin firmness, hair strength, and nail health.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pd__highlights">
+            <div class="pd__highlight-card">
+              <span class="pd__highlight-num">30</span>
+              <span class="pd__highlight-label">Days supply per bottle (2 caps/day)</span>
+            </div>
+            <div class="pd__highlight-card">
+              <span class="pd__highlight-num">28</span>
+              <span class="pd__highlight-label">Days to visible results</span>
+            </div>
+            <div class="pd__highlight-card">
+              <span class="pd__highlight-num">5-in-1</span>
+              <span class="pd__highlight-label">Skin, hair, nails, joints &amp; bones</span>
+            </div>
+
+            <div class="pd__buy-single">
+              <p class="pd__buy-single-label">Buy Separately</p>
+              <div class="pricing__mini">
+                <div class="pricing__mini-row">
+                  <span>&euro;69 one-time</span>
+                  <button class="btn btn--outline btn--sm" data-checkout="caps-women-onetime">Buy</button>
+                </div>
+                <div class="pricing__mini-row">
+                  <span>&euro;59/mo <em>subscribe</em></span>
+                  <button class="btn btn--outline btn--sm" data-checkout="caps-women-sub">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STICKY CTA BAR -->
+  <div class="sticky-bar" id="stickyBar">
+    <div class="container">
+      <div class="sticky-bar__inner">
+        <div class="sticky-bar__info">
+          <strong>Women's Set</strong>
+          <span>Peptidermax + Collasax Q28</span>
+        </div>
+        <div class="sticky-bar__action">
+          <span class="sticky-bar__price">&euro;119</span>
+          <button class="btn btn--gold btn--sm" data-checkout="set-women-onetime">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="footer__logo">AMX <span>Luxury</span></a>
+          <p>Luxury without compromise.<br>Science without cruelty.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="../index.html#story">Our Story</a></li>
+            <li><a href="../index.html#values">Philosophy</a></li>
+            <li><a href="men-set.html">Men's Set</a></li>
+            <li><a href="women-set.html">Women's Set</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__newsletter">
+          <h4>Stay in Touch</h4>
+          <p>Be the first to know about new products and exclusive offers.</p>
+          <form class="footer__form" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email address" required>
+            <button type="submit" class="btn btn--gold btn--sm">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 AMX Luxury. All rights reserved.</p>
+        <div class="footer__badges">
+          <span>Vegan</span><span>Cruelty-Free</span><span>Lab-Proven</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

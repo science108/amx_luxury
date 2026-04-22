@@ -679,6 +679,20 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   letter-spacing: 0.15em;
 }
 
+.set__sub-link {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+}
+.set__sub-link a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.set__sub-link a:hover { color: var(--gold-light); }
+.set__sub-link--dark { color: var(--gray-400); }
+.set__sub-link--dark a { color: var(--gold-dark); }
+
 /* ============================================================
    VEGAN SECTION
    ============================================================ */
