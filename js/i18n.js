@@ -216,7 +216,88 @@
 
     'sticky.addtocart':  { en: 'Add to Cart',   pl: 'Dodaj do Koszyka' },
     'sticky.men':        { en: 'Men\'s Set',   pl: 'Zestaw Męski' },
-    'sticky.women':      { en: 'Women\'s Set',   pl: 'Zestaw Damski' }
+    'sticky.women':      { en: 'Women\'s Set',   pl: 'Zestaw Damski' },
+
+    /* ====== NAV — new link ====== */
+    'nav.secret':        { en: 'The Secret',   pl: 'Sekret' },
+    'footer.secret':     { en: 'The Secret',   pl: 'Sekret Księżniczki' },
+
+    /* ====== PRESS / AS SEEN IN (landing page) ====== */
+    'press.label':       { en: 'As Seen In',   pl: 'W Prasie' },
+    'press.title':       { en: 'Secret of the Qatari Princess',   pl: 'Sekret Katarskiej Księżniczki' },
+    'press.desc':        { en: 'Read the extraordinary true story of how a chance encounter with a Qatari princess changed everything &mdash; and led to the creation of AMX Luxury.',
+                           pl: 'Przeczytaj niezwykłą prawdziwą historię o tym, jak spotkanie z katarską księżniczką zmieniło wszystko &mdash; i doprowadziło do powstania AMX Luxury.' },
+    'press.link':        { en: 'Read the full story &rarr;',   pl: 'Przeczytaj całą historię &rarr;' },
+
+    /* ====== ARTICLE PAGE ====== */
+    'art.label':         { en: 'Family Stories',   pl: 'Historie Rodzinne' },
+    'art.title':         { en: 'Secret of the<br>Qatari <em>Princess</em>',
+                           pl: 'Sekret Katarskiej<br><em>Księżniczki</em>' },
+    'art.subtitle':      { en: 'My name is Anna and I would like to tell you my story &mdash; a story that really happened.',
+                           pl: 'Mam na imię Anna i chciałabym opowiedzieć moją historię, która wydarzyła się naprawdę.' },
+    'art.scan.label':    { en: 'As Featured In Print',   pl: 'Opublikowano w Prasie' },
+    'art.scan.desc':     { en: 'This story was originally published as a feature article in a national lifestyle magazine. Read the full story below.',
+                           pl: 'Ta historia została pierwotnie opublikowana jako artykuł w ogólnopolskim magazynie lifestylowym. Przeczytaj pełną historię poniżej.' },
+
+    'art.ch1.title':     { en: 'Until now, I only saw princesses in movies&hellip;',
+                           pl: 'Do tej pory księżniczki widziałam tylko w filmach&hellip;' },
+    'art.ch1.p1':        { en: 'Until now, I only saw princesses in movies. Those beautiful, mysterious women draped in gold, living in palaces beyond imagination. I never thought that one day I would meet one in person &mdash; and that she would change my life forever.',
+                           pl: 'Do tej pory księżniczki widziałam tylko w filmach. Te piękne, tajemnicze kobiety ubrane w złoto, żyjące w pałacach przekraczających wyobraźnię. Nigdy nie pomyślałam, że pewnego dnia spotkam jedną z nich osobiście &mdash; i że zmieni moje życie na zawsze.' },
+    'art.ch1.p2':        { en: 'My name is Anna. For over 15 years, I have been passionate about beauty, natural skincare, and wellness. As an influencer, I have tried hundreds of products, visited countless clinics, and spoken with the best dermatologists in Europe. Yet nothing truly amazed me &mdash; until a journey to Qatar turned everything upside down.',
+                           pl: 'Mam na imię Anna. Od ponad 15 lat pasjonuję się urodą, naturalną pielęgnacją skóry i wellness. Jako influencerka wypróbowałam setki produktów, odwiedziłam niezliczone kliniki i rozmawiałam z najlepszymi dermatologami w Europie. Jednak nic mnie naprawdę nie zadziwiło &mdash; aż do podróży do Kataru, która wywróciła wszystko do góry nogami.' },
+    'art.ch1.p3':        { en: 'I was invited to Doha for a private beauty conference organized by one of the most prestigious families in the Persian Gulf. The city itself was breathtaking &mdash; gleaming skyscrapers reflected in turquoise waters, the scent of oud wafting through air-conditioned corridors of marble palaces. But what took my breath away wasn\'t the architecture.',
+                           pl: 'Zostałam zaproszona do Dohy na prywatną konferencję beauty, zorganizowaną przez jedną z najbardziej prestiżowych rodzin Zatoki Perskiej. Samo miasto zapierało dech w piersiach &mdash; lśniące wieżowce odbijające się w turkusowych wodach, zapach oudu unoszący się w klimatyzowanych korytarzach marmurowych pałaców. Ale to nie architektura zaparła mi dech.' },
+
+    'art.ch2.title':     { en: 'And then I saw her&hellip;',   pl: 'I wtedy ją zobaczyłam&hellip;' },
+    'art.ch2.p1':        { en: 'At a private reception in a residence overlooking the Pearl-Qatar, I noticed a woman whose presence commanded the entire room. Her skin was luminous &mdash; porcelain-smooth with an inner glow that no makeup could replicate. I assumed she was in her thirties. I was wrong. She was approaching sixty.',
+                           pl: 'Na prywatnym przyjęciu w rezydencji z widokiem na Pearl-Qatar zauważyłam kobietę, której obecność przyciągała uwagę całego pomieszczenia. Jej skóra była promienna &mdash; porcelanowo gładka z wewnętrznym blaskiem, którego żaden makijaż nie mógł odtworzyć. Założyłam, że ma trzydzieści kilka lat. Myliłam się. Zbliżała się do sześćdziesiątki.' },
+    'art.ch2.p2':        { en: 'She was a princess from one of the ruling families. Her husband was a sheikh, and her world was one of absolute luxury. But it wasn\'t diamonds or designer gowns that defined her beauty. It was something deeper &mdash; a secret passed down through generations of women in the royal family.',
+                           pl: 'Była księżniczką z jednej z rodzin rządzących. Jej mąż był szejkiem, a jej świat to absolutny luksus. Ale to nie diamenty ani kreacje od projektantów definiowały jej piękno. To było coś głębszego &mdash; sekret przekazywany z pokolenia na pokolenie wśród kobiet z rodziny królewskiej.' },
+    'art.quote1':        { en: '&ldquo;I looked at her and couldn\'t believe my eyes. Her skin was flawless &mdash; not in the way of someone who has had work done, but in a way that spoke of deep, natural radiance. She was nearly sixty, yet she glowed like a woman half her age.&rdquo;',
+                           pl: '&ldquo;Patrzyłam na nią i nie mogłam uwierzyć własnym oczom. Jej skóra była nieskazitelna &mdash; nie w sposób kogoś po zabiegach, ale w sposób mówiący o głębokiej, naturalnej promienności. Miała prawie sześćdziesiąt lat, a promieniała jak kobieta o połowę młodsza.&rdquo;' },
+    'art.ch2.p3':        { en: 'We spoke for hours that evening. She told me about ancient beauty rituals using plant-based peptides and botanical extracts &mdash; formulas her family had refined over centuries, long before the Western world discovered collagen. The key? They never used animal-derived ingredients. Everything came from plants, seeds, and desert botanicals.',
+                           pl: 'Rozmawiałyśmy godzinami tego wieczoru. Opowiedziała mi o starożytnych rytuałach piękna z użyciem roślinnych peptydów i ekstraktów botanicznych &mdash; formuły, które jej rodzina udoskonalała przez wieki, na długo zanim zachodni świat odkrył kolagen. Klucz? Nigdy nie używały składników odzwierzęcych. Wszystko pochodziło z roślin, nasion i pustynnych ziół.' },
+
+    'art.teaser1.title': { en: 'Peptidermax Cream',   pl: 'Krem Peptidermax' },
+    'art.teaser1.desc':  { en: 'Inspired by ancient peptide rituals &mdash; advanced vegan bioactive cream',
+                           pl: 'Inspirowany starożytnymi rytuałami peptydowymi &mdash; zaawansowany wegański krem bioaktywny' },
+    'art.teaser.discover':{ en: 'Discover',   pl: 'Odkryj' },
+
+    'art.ch3.title':     { en: 'My husband is a Sheikh of Qatar',   pl: 'Mój mąż to szejk Kataru' },
+    'art.ch3.p1':        { en: 'Over the following days, the princess invited me to her private quarters &mdash; a rare honor. There, surrounded by shelves of golden-lidded jars and hand-labeled vials, she revealed the full scope of her beauty regimen. Each preparation was meticulously crafted from vegan ingredients: peptides extracted from desert plants, collagen-boosting compounds from rare seeds, and serums infused with botanical wisdom passed down from her grandmother.',
+                           pl: 'W ciągu kolejnych dni księżniczka zaprosiła mnie do swoich prywatnych komnat &mdash; to rzadki zaszczyt. Tam, otoczona półkami ze złotymi słoiczkami i ręcznie podpisanymi fiolkami, ujawniła pełen zakres swojego rytuału piękna. Każdy preparat był starannie tworzony z wegańskich składników: peptydów wyekstrahowanych z pustynnych roślin, związków wzmacniających kolagen z rzadkich nasion i serum nasyconych botaniczną mądrością przekazywaną od jej babci.' },
+    'art.ch3.p2':        { en: '&ldquo;In our family,&rdquo; she told me, &ldquo;we believe that true beauty must never come from suffering. Not from animals, not from anyone. When you nourish your skin with respect for all living things, the results speak for themselves.&rdquo;',
+                           pl: '&ldquo;W naszej rodzinie,&rdquo; powiedziała mi, &ldquo;wierzymy, że prawdziwe piękno nigdy nie powinno płynąć z cierpienia. Ani zwierząt, ani kogokolwiek. Kiedy odżywiasz swoją skórę z szacunkiem do wszystkich żywych istot, rezultaty mówią same za siebie.&rdquo;' },
+    'art.ch3.p3':        { en: 'Her words struck me profoundly. As a lifelong vegetarian, as someone who had searched for years for effective cruelty-free skincare, I felt as though I had finally found the answer I had been seeking. The princess offered to share her family\'s formulas &mdash; not for profit, but because she believed this knowledge should reach women everywhere.',
+                           pl: 'Jej słowa uderzyły mnie głęboko. Jako wegetarianka od urodzenia, jako ktoś, kto latami szukał skutecznej pielęgnacji bez okrucieństwa, poczułam, jakbym wreszcie znalazła odpowiedź, której szukałam. Księżniczka zaproponowała podzielenie się formułami swojej rodziny &mdash; nie dla zysku, ale dlatego że wierzyła, iż ta wiedza powinna dotrzeć do kobiet na całym świecie.' },
+
+    'art.ch4.title':     { en: 'The Great Secret of Youth',   pl: 'Wielki Sekret Młodości' },
+    'art.ch4.p1':        { en: 'I returned home with notebooks full of formulas and a heart full of purpose. I went straight to my father\'s laboratory &mdash; he had been creating ethical, plant-based supplements for decades. Together, we began translating the princess\'s ancient wisdom into modern, scientifically validated products.',
+                           pl: 'Wróciłam do domu z notatnikami pełnymi formuł i sercem pełnym celu. Poszłam prosto do laboratorium mojego taty &mdash; od dekad tworzył etyczne, roślinne suplementy. Razem zaczęliśmy przekładać starożytną mądrość księżniczki na nowoczesne, naukowo potwierdzone produkty.' },
+    'art.ch4.p2':        { en: 'The result was extraordinary. By combining cutting-edge vegan peptides like Neodermyl and Argirelina with traditional botanical extracts, we created formulas that didn\'t just match animal-derived collagen products &mdash; they surpassed them. Clinical tests confirmed it: visible wrinkle reduction in 28 days, improved skin firmness, and a natural glow that our testers described as &ldquo;magical.&rdquo;',
+                           pl: 'Rezultat był nadzwyczajny. Łącząc najnowocześniejsze wegańskie peptydy, takie jak Neodermyl i Argirelina, z tradycyjnymi ekstraktami botanicznymi, stworzyliśmy formuły, które nie tylko dorównywały produktom kolagenowym pochodzenia zwierzęcego &mdash; przewyższały je. Badania kliniczne to potwierdziły: widoczna redukcja zmarszczek w 28 dni, poprawa jędrności skóry i naturalny blask, który nasze testerki opisywały jako &ldquo;magiczny.&rdquo;' },
+    'art.quote2':        { en: '&ldquo;Do my model friends from the runways of famous fashion brands envy me? Let me just say &mdash; they all want to know the secret now.&rdquo;',
+                           pl: '&ldquo;Czy zazdroszczą mi moje znajome modelki z wybiegów słynnych modowych marek? Powiem tylko &mdash; teraz wszystkie chcą poznać ten sekret.&rdquo;' },
+
+    'art.ch5.title':     { en: 'The Youth Injection &mdash; Without a Single Needle',
+                           pl: 'Zastrzyk Młodości &mdash; Bez Jednej Igły' },
+    'art.ch5.p1':        { en: 'We called our line AMX Luxury &mdash; because we wanted to prove that true luxury doesn\'t demand the suffering of any living being. Each product carries the spirit of that Qatari princess\'s wisdom: the belief that nature, science, and ethics can create something more powerful than any synthetic formula.',
+                           pl: 'Nazwaliśmy naszą linię AMX Luxury &mdash; bo chcieliśmy udowodnić, że prawdziwy luksus nie wymaga cierpienia żadnej żywej istoty. Każdy produkt niesie ducha mądrości tamtej katarskiej księżniczki: wiarę, że natura, nauka i etyka mogą stworzyć coś potężniejszego niż jakakolwiek syntetyczna formuła.' },
+    'art.ch5.p2':        { en: 'The Complete Set combines three powerhouses: a rejuvenating peptide cream that works like a &ldquo;needle in a jar,&rdquo; vegan collagen-activating capsules that boost your body\'s own production from within, and a concentrated serum that amplifies everything. Together, they deliver what we call a &ldquo;youth injection&rdquo; &mdash; without a single needle, without a single compromise.',
+                           pl: 'Pełny Zestaw łączy trzy potęgi: odmładzający krem peptydowy, który działa jak &ldquo;igła w słoiczku,&rdquo; wegańskie kapsułki aktywujące kolagen, które wzmacniają naturalną produkcję organizmu od wewnątrz, oraz skoncentrowane serum, które wzmacnia wszystko. Razem dostarczają to, co nazywamy &ldquo;zastrzykiem młodości&rdquo; &mdash; bez jednej igły, bez jednego kompromisu.' },
+
+    'art.shop.label':    { en: 'Shop the Secret',   pl: 'Kup Sekret' },
+    'art.shop.title':    { en: 'The Complete AMX Luxury Set',   pl: 'Pełny Zestaw AMX Luxury' },
+    'art.shop.cream':    { en: 'Peptide Cream · 50ml',   pl: 'Krem peptydowy · 50ml' },
+    'art.shop.caps':     { en: 'Capsules · 60 caps',   pl: 'Kapsułki · 60 szt.' },
+    'art.shop.serum':    { en: 'Active Serum · 30ml',   pl: 'Aktywne Serum · 30ml' },
+    'art.shop.save':     { en: 'Save €18 with the Complete Set',   pl: 'Oszczędź €18 z Pełnym Zestawem' },
+    'art.shop.cta.women':{ en: 'Shop Women\'s Set',   pl: 'Kup Zestaw Damski' },
+    'art.shop.cta.men':  { en: 'Shop Men\'s Set',   pl: 'Kup Zestaw Męski' },
+
+    'art.final.quote':   { en: '&ldquo;Now we have become the holders of the great secret of youth. And it\'s 100% plant-powered.&rdquo;',
+                           pl: '&ldquo;Teraz to my stałyśmy się posiadaczkami wielkiego sekretu młodości. I jest w 100% roślinny.&rdquo;' },
+    'art.final.cta':     { en: 'Explore AMX Luxury',   pl: 'Odkryj AMX Luxury' }
   };
 
   /* ---------- Engine ---------- */
