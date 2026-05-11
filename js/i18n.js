@@ -225,9 +225,12 @@
     /* ====== PRESS / AS SEEN IN (landing page) ====== */
     'press.label':       { en: 'As Seen In',   pl: 'W Prasie' },
     'press.title':       { en: 'Secret of the Qatari Princess',   pl: 'Sekret Katarskiej Księżniczki' },
-    'press.desc':        { en: 'Read the extraordinary true story of how a chance encounter with a Qatari princess changed everything &mdash; and led to the creation of AMX Luxury.',
-                           pl: 'Przeczytaj niezwykłą prawdziwą historię o tym, jak spotkanie z katarską księżniczką zmieniło wszystko &mdash; i doprowadziło do powstania AMX Luxury.' },
-    'press.link':        { en: 'Read the full story &rarr;',   pl: 'Przeczytaj całą historię &rarr;' },
+    'press.quote':       { en: '&ldquo;I looked at her and couldn\'t believe my eyes. She was nearly sixty, yet she glowed like a woman half her age.&rdquo;',
+                           pl: '&ldquo;Patrzyłam na nią i nie mogłam uwierzyć własnym oczom. Miała prawie sześćdziesiąt lat, a promieniała jak kobieta o połowę młodsza.&rdquo;' },
+    'press.desc':        { en: 'The extraordinary true story of how a chance encounter with a Qatari princess changed everything &mdash; and led to the creation of AMX Luxury.',
+                           pl: 'Niezwykła prawdziwa historia o tym, jak spotkanie z katarską księżniczką zmieniło wszystko &mdash; i doprowadziło do powstania AMX Luxury.' },
+    'press.badge':       { en: 'Featured Article',   pl: 'Artykuł Prasowy' },
+    'press.cta':         { en: 'Read the Full Story',   pl: 'Przeczytaj Całą Historię' },
 
     /* ====== ARTICLE PAGE ====== */
     'art.label':         { en: 'Family Stories',   pl: 'Historie Rodzinne' },
